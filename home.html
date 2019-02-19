@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/home.css" media="screen" charset="utf-8">
   </head>
   <body>
+    <!--Elem 1-->
     <div class="row">
       <div class="medium-3 columns text-center">
         <h1>e-Store</h1>
       </div>
       <div class="medium-4 columns medium-offset-5">
-        <div class="column row">
+        <div class="column row hide-for-medium-only"><!--esconder para smartphones en posición vertical-->
           <div class="menu align-right">
             <li><a href="#">Ingresa</a></li>
             <li><a href="#">Regístrate</a></li>
@@ -22,7 +23,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="small-9 columns medium-offset-3">
+          <div class="small-9 columns medium-offset-3 show-for-landscape"><!--esconder para smartphones en posición vertical-->
             <ul class="menu align-right">
               <li><a><i class="step fi-social-facebook size-36"></i></a></li>
               <li><a><i class="step fi-social-instagram size-36"></i></a></li>
@@ -35,8 +36,9 @@
       </div>
     </div>
 
-    <div class="column row">
-      <div class="button-group expanded">
+    <!--Elem 2-->
+    <div class="column row"><!--En smartphones se debe apilar el button group con la clase "stacked-for-small" y se debe ubicar al final de la página, para esto se debe usar la clase "small-order" si usas FlexGrid-->
+      <div class="button-group expanded stacked-for-small small-order-1">
         <a href="#" class="button">Hogar</a>
         <a href="#" class="button">Salud</a>
         <a href="#" class="button">Deporte</a>
@@ -48,8 +50,9 @@
       </div>
     </div>
 
+    <!--Elem 3-->
     <div class="column row">
-      <ul class="breadcrumbs">
+      <ul class="breadcrumbs"><!--Hacer que el contenido del elemento breadcrumbs no sea leìdo por el screen reader-->
         <li><a href="#">Home</a></li>
         <li><a href="#">Hogar</a></li>
         <li><a href="#">Varios</a></li>
@@ -57,9 +60,14 @@
       </ul>
     </div>
 
+    <!--Elem 4-->
     <div class="row large-uncollapse">
       <div class="large-3 columns">
         <div class="callout">
+          <!--En smartphones toda la columna no debe mostrarse, en tablets, esta sección debe ocupar 4 columnas-->
+
+          <!--Antes del formulario de búsqueda avanzada, se debe añadir un párrafo que sólo sea leído por el screen reader, con el siguiente texto: “A continuación hay un formulario para hacer búsquedas avanzadas”.-->
+
           <h4>Búsqueda Avanzada</h4>
           <!--inicio de formulario-->
           <label>
@@ -104,14 +112,14 @@
           <div style="text-align:center;">
             <a href="#" class="large button" style="margin:auto;">Buscar  <i class="step fi-magnifying-glass"></i></a>
           </div>
-
         </div>
+
       </div>
       <div class="large-9 columns">
         <div class="callout">
           <h3>Decoración</h3>
           <hr>
-          <div class="row large-uncollapse">
+          <div class="row large-uncollapse"><!--En tablets, los items de la tienda deben aparecer intercaladamente 2 en la primera fila, 1 en la segunda, 2 en la tercera y 1 en la cuarta-->
             <div class="large-4 columns">
               <div class="secondary callout text-center">
                 <img src="img/1.jpg" alt="Decoracion 1" class="thumbnail"/>
